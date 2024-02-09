@@ -28,7 +28,7 @@ class Home : Fragment() {
         val bF2 = view.findViewById<TextView>(R.id.button2)
         val bF3 = view.findViewById<TextView>(R.id.button3)
         val bF4 = view.findViewById<TextView>(R.id.button4)
-
+//hello
 
         val controller = findNavController()
 //        bF1.setOnClickListener { controller.navigate(R.id.signIm) }
