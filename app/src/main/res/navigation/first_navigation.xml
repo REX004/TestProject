@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/first_navigation"
+    app:startDestination="@id/onBoarding1">
+    <fragment
+        android:id="@+id/onBoarding1"
+        android:name="com.example.testchamp.session1.OnBoarding1"
+        android:label="splash_screen"
+        tools:layout="@layout/on_boarding1" >
+        <action
+            android:id="@+id/action_onBoarding1_to_onBoarding22"
+            app:destination="@id/onBoarding2" />
+        <action
+            android:id="@+id/action_onBoarding1_to_onBoarding3"
+            app:destination="@id/onBoarding3" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding2"
+        android:name="com.example.testchamp.session1.OnBoarding2"
+        android:label="OnBoarding2" >
+        <action
+            android:id="@+id/action_onBoarding2_to_logIn"
+            app:destination="@id/logIn" />
+        <action
+            android:id="@+id/action_onBoarding2_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding3"
+        android:name="com.example.testchamp.session1.OnBoarding3"
+        android:label="OnBoarding3" >
+        <action
+            android:id="@+id/action_onBoarding3_to_onBoarding2"
+            app:destination="@id/onBoarding2" />
+    </fragment>
+    <fragment
+        android:id="@+id/logIn"
+        android:name="com.example.testchamp.session2.LogIn"
+        android:label="log_in"
+        tools:layout="@layout/log_in" >
+        <action
+            android:id="@+id/action_logIn_to_newPassword"
+            app:destination="@id/newPassword" />
+        <action
+            android:id="@+id/action_logIn_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
+        <action
+            android:id="@+id/action_logIn_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPassword"
+        android:name="com.example.testchamp.session2.NewPassword"
+        android:label="new_password"
+        tools:layout="@layout/new_password" />
+    <fragment
+        android:id="@+id/forgotPassword"
+        android:name="com.example.testchamp.session2.ForgotPassword"
+        android:label="forgot_password"
+        tools:layout="@layout/forgot_password" >
+        <action
+            android:id="@+id/action_forgotPassword_to_logIn"
+            app:destination="@id/logIn" />
+        <action
+            android:id="@+id/action_forgotPassword_to_otpVerification"
+            app:destination="@id/otpVerification" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpVerification"
+        android:name="com.example.testchamp.session2.OtpVerification"
+        android:label="otp_verification"
+        tools:layout="@layout/otp_verification" >
+        <action
+            android:id="@+id/action_otpVerification_to_newPassword"
+            app:destination="@id/newPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUp"
+        android:name="com.example.testchamp.session2.SignUp"
+        android:label="SignUp" >
+        <action
+            android:id="@+id/action_signUp4_to_logIn"
+            app:destination="@id/logIn" />
+    </fragment>
+</navigation>
